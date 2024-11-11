@@ -2,9 +2,9 @@ import { createServer } from "node:http";
 import { app } from "./app.ts";
 import config from "./config.ts";
 import colors from "@colors/colors";
-// import { setupDatabase } from "./database/index.js";
+import { setupDatabase } from "./database/index.ts";
 
-// setupDatabase();
+setupDatabase();
 const server = createServer(app);
 
 server.listen(config.port, () => {
